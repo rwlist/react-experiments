@@ -1,0 +1,29 @@
+.Board-tiles {
+    display: flex;
+    justify-content: space-around;
+}
+
+.Board-actions {
+    background-color: #f8f8f8;
+    display: flex;
+    width: 100%;
+    padding: 20px 0 20px 0;
+}
+
+.Board-actions > * {
+    margin: auto;
+}
+
+.Board-action-button {
+    background-color: #33cf33;
+    border: none;
+    color: white;
+    font-size: 1em;
+    padding: 7px;
+    border-radius: 4px;
+}
+
+.Board-action-button:hover {
+    background-color: #51e451;
+    cursor: pointer;
+}

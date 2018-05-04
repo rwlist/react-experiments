@@ -1,21 +1,30 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Bottom from './Bottom';
+import Board from './Board';
+import deepMerge from 'deep-merge';
 import './App.css';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+    constructor(props) {
+        super(props);
+        this.state = {
+            lastId: 0,
+            tasks: [
+
+            ]
+        };
+    }
+
+    render() {
+        return (
+            <div className="App-content">
+                <div className="App-main">
+                    <Board tasks={this.state.tasks}/>
+                </div>
+                <Bottom />
+            </div>
+        );
+    }
 }
 
 export default App;
